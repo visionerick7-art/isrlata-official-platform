@@ -1,452 +1,593 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ISRLATA — Integrated and Sustainable Real-Life Africa Transformation Action. Rooted in nature, driven by innovation, united in purpose.">
-  <meta name="theme-color" content="#103d2b">
 
-  <title>ISRLATA | Integrated Transformation</title>
+  <meta name="description" content="ISRLATA — Integrated and Sustainable Real Life African Transformation Action. An integrated framework for sustainable transformation, beginning in Kenya.">
 
-  <style>
-    :root {
-      --green: #103d2b;
-      --green-light: #1c6243;
-      --gold: #d9ad45;
-      --cream: #f7f6ef;
-      --white: #ffffff;
-      --text: #24352c;
-      --muted: #68766d;
-    }
+  <meta name="theme-color" content="#083b27">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <title>ISRLATA | Integrated and Sustainable Real Life African Transformation Action</title>
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    header {
-      background: var(--green);
-      color: var(--white);
-      padding: 18px 7%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-size: 1.6rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      color: var(--gold);
-    }
-
-    nav {
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: var(--white);
-      font-size: 0.95rem;
-    }
-
-    nav a:hover {
-      color: var(--gold);
-    }
-
-    .hero {
-      min-height: 570px;
-      padding: 100px 7%;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(90deg, rgba(8, 39, 27, .96), rgba(8, 39, 27, .65)),
-        url("https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
-      color: var(--white);
-    }
-
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      font-weight: bold;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4.7rem);
-      line-height: 1.12;
-      margin-bottom: 22px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      font-size: 1.15rem;
-      color: #e8eee9;
-      margin-bottom: 30px;
-    }
-
-    .button {
-      display: inline-block;
-      background: var(--gold);
-      color: #183526;
-      padding: 13px 25px;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: .2s;
-    }
-
-    .button:hover {
-      background: #f0ca70;
-      transform: translateY(-2px);
-    }
-
-    section {
-      padding: 75px 7%;
-    }
-
-    .section-heading {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 42px;
-    }
-
-    .section-heading h2 {
-      color: var(--green);
-      font-size: clamp(2rem, 4vw, 2.7rem);
-      margin-bottom: 12px;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-    }
-
-    .intro {
-      background: var(--white);
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .intro-card {
-      padding: 28px;
-      border-left: 4px solid var(--gold);
-      background: var(--cream);
-      border-radius: 6px;
-    }
-
-    .intro-card h3 {
-      color: var(--green);
-      margin-bottom: 12px;
-    }
-
-    .initiatives {
-      background: var(--cream);
-    }
-
-    .initiative-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-    }
-
-    .initiative {
-      background: var(--white);
-      padding: 26px;
-      border-radius: 8px;
-      border-bottom: 4px solid var(--green-light);
-      box-shadow: 0 5px 18px rgba(0,0,0,.05);
-      transition: .2s;
-    }
-
-    .initiative:hover {
-      transform: translateY(-5px);
-    }
-
-    .initiative .number {
-      color: var(--gold);
-      font-size: 1.7rem;
-      font-weight: bold;
-    }
-
-    .initiative h3 {
-      color: var(--green);
-      margin: 8px 0 12px;
-      font-size: 1.12rem;
-    }
-
-    .initiative p {
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-    .platform {
-      background: var(--green);
-      color: var(--white);
-      text-align: center;
-    }
-
-    .platform h2 {
-      font-size: 2.3rem;
-      margin-bottom: 15px;
-      color: var(--gold);
-    }
-
-    .platform p {
-      max-width: 780px;
-      margin: 0 auto 25px;
-      color: #e3ebe5;
-    }
-
-    .platform .button {
-      margin: 7px;
-    }
-
-    footer {
-      background: #09291d;
-      color: #dce8df;
-      padding: 35px 7%;
-      text-align: center;
-    }
-
-    footer strong {
-      color: var(--gold);
-    }
-
-    footer p {
-      margin: 6px 0;
-      font-size: .9rem;
-    }
-
-    @media (max-width: 650px) {
-      header {
-        justify-content: center;
-        text-align: center;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 12px;
-      }
-
-      .hero {
-        min-height: 500px;
-        padding-top: 70px;
-        padding-bottom: 70px;
-      }
-
-      section {
-        padding: 55px 6%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <header>
-    <a class="brand" href="#">ISRLATA</a>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
 
-    <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#initiatives">Initiatives</a>
-      <a href="#platform">Our Platform</a>
-    </nav>
+      <a href="#home" class="brand">
+        <span class="brand-mark">I</span>
+        <span>ISRLATA</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#systems">Systems</a>
+        <a href="#implementation">Implementation</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
   </header>
+
 
   <main>
 
+    <!-- HERO SECTION -->
     <section class="hero" id="home">
-      <div class="hero-content">
-        <div class="eyebrow">From Grassroots to Growth</div>
+      <div class="container hero-content">
 
-        <h1>Integrated Solutions for a Sustainable African Future</h1>
+        <span class="hero-label">
+          An Integrated African Transformation Framework
+        </span>
+
+        <h1>
+          Integrated and Sustainable Real Life African Transformation Action
+        </h1>
 
         <p>
-          ISRLATA is an integrated transformation framework connecting
-          people, nature, culture, innovation and technology to create
-          sustainable real-life progress.
+          ISRLATA is an integrated framework for practical, ethical and
+          sustainable transformation. It brings together human wellbeing,
+          environmental regeneration, agriculture, culture, creativity,
+          technology and responsible economic development.
         </p>
 
-        <a class="button" href="#about">Discover ISRLATA</a>
-      </div>
-    </section>
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-primary">
+            Explore ISRLATA
+          </a>
 
-    <section class="intro" id="about">
-      <div class="section-heading">
-        <h2>About ISRLATA</h2>
-        <p>
-          Integrated and Sustainable Real-Life Africa Transformation Action
-        </p>
-      </div>
-
-      <div class="intro-grid">
-        <article class="intro-card">
-          <h3>Our Vision</h3>
-          <p>
-            To awaken a new Africa — bold, green, and united — where every
-            life flourishes in dignity, creativity, and sustainability.
-          </p>
-        </article>
-
-        <article class="intro-card">
-          <h3>Our Mission</h3>
-          <p>
-            To lead Africa's real-life transformation by integrating people,
-            nature and innovation into one living system of growth.
-          </p>
-        </article>
-
-        <article class="intro-card">
-          <h3>Our Guiding Identity</h3>
-          <p>
-            Rooted in nature. Driven by innovation. United in purpose.
-            Integrated vision. Sustainable future. Real transformation.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="initiatives" id="initiatives">
-      <div class="section-heading">
-        <h2>Our Nine Core Initiatives</h2>
-        <p>
-          The interconnected initiatives forming the ISRLATA transformation
-          framework.
-        </p>
-      </div>
-
-      <div class="initiative-grid">
-
-        <article class="initiative">
-          <div class="number">01</div>
-          <h3>SURADMA</h3>
-          <p>
-            Sustainable Urban and Rural Aesthetic Development and
-            Management Action.
-          </p>
-        </article>
-
-        <article class="initiative">
-          <div class="number">02</div>
-          <h3>ISULAR</h3>
-          <p>
-            Integrated and Sustainable Utilization of Locally Available
-            Resources.
-          </p>
-        </article>
-
-        <article class="initiative">
-          <div class="number">03</div>
-          <h3>HNIRS</h3>
-          <p>
-            Human–Nature Interaction and Regenerative Systems.
-          </p>
-        </article>
-
-        <article class="initiative">
-          <div class="number">04</div>
-          <h3>RAMAGS</h3>
-          <p>
-            Real-Life African Moral Action and Guider Systems.
-          </p>
-        </article>
-
-        <article class="initiative">
-          <div class="number">05</div>
-          <h3>KCHAS</h3>
-          <p>
-            Kenyan Creative Hubs and Adaptation System.
-          </p>
-        </article>
-
-        <article class="initiative">
-          <div class="number">06</div>
-          <h3>FTLSS</h3>
-          <p>
-            Farmer–Tenant Leasehold Sustainability System.
-          </p>
-        </article>
-
-        <article class="initiative">
-          <div class="number">07</div>
-          <h3>HuMLIF</h3>
-          <p>
-            Human and Machine Labour Integration Framework.
-          </p>
-        </article>
-
-        <article class="initiative">
-          <div class="number">08</div>
-          <h3>AKBOR</h3>
-          <p>
-            African-Kenyan Based Originality Reforms.
-          </p>
-        </article>
-
-        <article class="initiative">
-          <div class="number">09</div>
-          <h3>GHISTN</h3>
-          <p>
-            Global Holistic Integrated and Sustainable Transformation
-            Network.
-          </p>
-        </article>
+          <a href="#projects" class="btn btn-outline">
+            Discover Our Projects
+          </a>
+        </div>
 
       </div>
     </section>
 
-    <section class="platform" id="platform">
-      <h2>Building a Connected Future</h2>
 
-      <p>
-        ISRLATA is designed to connect research, practical projects,
-        communities, institutions, enterprises and global partnerships
-        through one integrated transformation system.
-      </p>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
 
-      <a class="button" href="#initiatives">Explore Our Initiatives</a>
+        <div class="section-heading">
+          <span class="hero-label">The Foundation</span>
+          <h2>About ISRLATA</h2>
+          <p>
+            Integrated and Sustainable Real Life African Transformation Action
+          </p>
+        </div>
+
+        <p>
+          ISRLATA is a proposed integrated transformation framework originating
+          in Kenya, with a long-term vision of contributing to sustainable
+          development across Africa and the wider world.
+        </p>
+
+        <p>
+          Its approach connects real-life challenges and practical action
+          through coordinated projects, research, knowledge systems,
+          community participation, institutional cooperation and
+          long-term sustainability.
+        </p>
+
+        <div class="highlight">
+          <h3>Our central approach</h3>
+          <p>
+            Integration, regeneration, dignity and continuity are central
+            principles guiding the ISRLATA framework.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CORE PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="hero-label">Integrated Action</span>
+          <h2>The Nine Core Projects</h2>
+          <p>
+            The major project areas through which the ISRLATA framework
+            organizes practical transformation.
+          </p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>SURADMA</h3>
+            <h4>Sustainable Urban and Rural Aesthetic Development and Management Action</h4>
+            <p>
+              Urban and rural environmental improvement, landscape
+              development, public spaces, aesthetic management and
+              sustainable community environments.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>ISULAR</h3>
+            <h4>Integrated and Sustainable Utilization of Locally Available Resources</h4>
+            <p>
+              Responsible utilization, value addition and regeneration
+              of locally available resources.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>HNIRS</h3>
+            <h4>Human–Nature Interaction and Regenerative Systems</h4>
+            <p>
+              The relationship between people and natural systems,
+              environmental responsibility and ecological regeneration.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>RAMAGS</h3>
+            <h4>Real-Life African Moral Action and Guider Systems</h4>
+            <p>
+              Practical moral guidance, responsible action and
+              community-centred ethical development.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>KCHAS</h3>
+            <h4>Kenyan Creative Hubs and Adaptation System</h4>
+            <p>
+              Creative hubs, innovation, adaptation and the development
+              of locally relevant solutions.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>FTLSS</h3>
+            <h4>Farmer–Tenant Leasehold Sustainability System</h4>
+            <p>
+              Sustainable agricultural land-use arrangements and
+              farmer–tenant cooperation.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>HuMLIF</h3>
+            <h4>Human and Machine Labour Integration Framework</h4>
+            <p>
+              Responsible integration of human capabilities,
+              machinery and technology in productive systems.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>AKBOR</h3>
+            <h4>African-Kenyan Based Originality Reforms</h4>
+            <p>
+              Originality, African identity, locally grounded
+              innovation and context-sensitive development.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>GHISTN</h3>
+            <h4>Global Holistic Integrated and Sustainable Transformation Network</h4>
+            <p>
+              A framework for wider cooperation, knowledge exchange
+              and integrated sustainable transformation.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- RESEARCH -->
+    <section class="section" id="research">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="hero-label">Knowledge and Evidence</span>
+          <h2>Seven Research Streams</h2>
+          <p>
+            Research areas supporting the development, testing and
+            improvement of ISRLATA interventions.
+          </p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>01. Sustainable Resource Utilization and Regeneration</h3>
+            <p>
+              Research into resource efficiency, local materials,
+              regeneration and sustainable production.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>02. Climate Resilience and Eco-Agricultural Systems</h3>
+            <p>
+              Research into climate-smart agriculture, food systems,
+              soil, water and ecological resilience.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>03. Human-Nature Interaction and Ethical Systems</h3>
+            <p>
+              Research into human wellbeing, environmental relationships
+              and ethical responsibility.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>04. Creative Economy and Aesthetic Development</h3>
+            <p>
+              Research into creativity, cultural production,
+              aesthetic environments and livelihoods.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>05. Technology and Human–Machine Integration</h3>
+            <p>
+              Research into appropriate technology, automation
+              and responsible human–machine cooperation.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>06. Cultural Identity, Moral Evolution, and Heritage Preservation</h3>
+            <p>
+              Research into cultural continuity, heritage,
+              identity and moral development.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>07. Global Holistic Integration and Systems Modeling</h3>
+            <p>
+              Research into integrated systems, coordination,
+              measurement and wider transformation models.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- KNOWLEDGE SYSTEMS -->
+    <section class="section" id="systems">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="hero-label">Integrated Knowledge Infrastructure</span>
+          <h2>Core ISRLATA Systems</h2>
+          <p>
+            Digital, agricultural and moral guidance systems
+            supporting the wider framework.
+          </p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>DKIP</h3>
+            <h4>Digital Knowledge Integration Platform</h4>
+            <p>
+              A proposed digital knowledge environment for information
+              integration, dashboards, learning resources,
+              citizen science and knowledge sharing.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>FGB</h3>
+            <h4>Farmer Guider Book</h4>
+            <p>
+              A practical agricultural guidance system covering
+              climate-smart farming, local seeds, soil and water
+              management, crop production and economic literacy.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>MGS</h3>
+            <h4>Moral Guider System</h4>
+            <p>
+              A proposed framework for moral education, public
+              guidance, conflict resolution, responsible action
+              and ethical oversight.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FOUNDATIONS -->
+    <section class="section" id="foundations">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="hero-label">Guiding Philosophy</span>
+          <h2>Philosophical Foundations</h2>
+          <p>
+            The principles and theories that guide the integrated
+            ISRLATA approach.
+          </p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>Law of Perfect Integration</h3>
+            <p>
+              Emphasizes coordination and meaningful relationships
+              between interconnected systems.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Law of Natural Abundance</h3>
+            <p>
+              Focuses on responsible recognition, utilization
+              and regeneration of natural resources.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Theory of Cultural Genetic Renewal</h3>
+            <p>
+              Addresses cultural continuity, identity and
+              the renewal of valuable heritage.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Principle of Planetary Responsibility</h3>
+            <p>
+              Promotes responsibility toward the environment
+              and future generations.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Integrated Transformation Theory</h3>
+            <p>
+              Organizes transformation around unity,
+              regeneration, dignity and continuity.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Law of Regenerative Equilibrium</h3>
+            <p>
+              Emphasizes balanced relationships between
+              human activity and regenerative systems.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- GOVERNANCE -->
+    <section class="section" id="governance">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="hero-label">Coordination and Accountability</span>
+          <h2>Governance Framework</h2>
+          <p>
+            The proposed coordination structure connects national,
+            county, community and international participation.
+          </p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>National Oversight</h3>
+            <p>
+              Proposed national steering and oversight authority.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>ITCC</h3>
+            <p>
+              ISRLATA Technical Coordination Committee.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>CIUs</h3>
+            <p>
+              County Implementation Units.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>CDHs</h3>
+            <p>
+              Community Development Hubs.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>IPC</h3>
+            <p>
+              International Partnership Council.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- IMPLEMENTATION -->
+    <section class="section" id="implementation">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="hero-label">Long-Term Development</span>
+          <h2>Six-Year Implementation Framework</h2>
+          <p>
+            A phased approach proposed in the ISRLATA framework.
+          </p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>Phase 1 — Year 1</h3>
+            <p>Foundation and institutional preparation.</p>
+          </article>
+
+          <article class="card">
+            <h3>Phase 2 — Year 2</h3>
+            <p>Pilot integration across six counties.</p>
+          </article>
+
+          <article class="card">
+            <h3>Phase 3 — Years 3–4</h3>
+            <p>National rollout and expansion.</p>
+          </article>
+
+          <article class="card">
+            <h3>Phase 4 — Year 5</h3>
+            <p>Consolidation and innovation.</p>
+          </article>
+
+          <article class="card">
+            <h3>Phase 5 — Year 6</h3>
+            <p>Sustainability and transition.</p>
+          </article>
+
+        </div>
+
+        <div class="highlight">
+          <h3>Monitoring, Evaluation and Learning</h3>
+          <p>
+            The proposed framework includes annual reporting,
+            county scorecards, public impact dashboards,
+            external audits and measurable sustainability indicators.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="hero-label">Cooperation and Participation</span>
+          <h2>Connect with ISRLATA</h2>
+          <p>
+            ISRLATA aims to build constructive cooperation among
+            communities, researchers, institutions, innovators,
+            investors and development partners.
+          </p>
+        </div>
+
+        <div class="highlight">
+          <h3>From integrated ideas to practical action.</h3>
+          <p>
+            This platform will progressively provide project
+            information, research resources, participation
+            opportunities and institutional updates.
+          </p>
+          <p>
+            <strong>Platform development status:</strong>
+            Initial website structure under development.
+          </p>
+        </div>
+
+      </div>
     </section>
 
   </main>
 
-  <footer>
-    <p><strong>ISRLATA</strong></p>
-    <p>Integrated and Sustainable Real-Life Africa Transformation Action</p>
-    <p>Rooted in Nature. Driven by Innovation. United in Purpose.</p>
-    <p>Kenya • Africa • The World</p>
-    <p>&copy; <span id="year"></span> ISRLATA. All rights reserved.</p>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div>
+        <h2>ISRLATA</h2>
+        <p>
+          Integrated and Sustainable Real Life African
+          Transformation Action.
+        </p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <p><a href="#about">About ISRLATA</a></p>
+        <p><a href="#projects">Core Projects</a></p>
+        <p><a href="#research">Research</a></p>
+        <p><a href="#systems">Knowledge Systems</a></p>
+      </div>
+
+      <div>
+        <h3>Framework</h3>
+        <p><a href="#foundations">Philosophy</a></p>
+        <p><a href="#governance">Governance</a></p>
+        <p><a href="#implementation">Implementation</a></p>
+        <p><a href="#contact">Contact</a></p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>
+        © <span id="year">2026</span> ISRLATA.
+        All rights reserved.
+      </p>
+      <p>Building an integrated and sustainable future.</p>
+    </div>
+
   </footer>
 
   <script>
@@ -455,4 +596,5 @@
   </script>
 
 </body>
-</html> 
+</html>
+
