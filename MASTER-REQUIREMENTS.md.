@@ -1,0 +1,506 @@
+# ISRLATA MASTER REQUIREMENTS DOCUMENT
+
+**File:** `MASTER-REQUIREMENTS.md`  
+**Project:** Integrated and Sustainable Real Life African Transformation Action (ISRLATA)  
+**Pilot country:** Kenya  
+**Long-term scope:** Africa and global integration  
+**Document status:** Foundational development control document  
+**Purpose:** To guide the complete development of the ISRLATA website, digital platform and future Android application.
+
+---
+
+## 1. DEVELOPMENT PURPOSE
+
+ISRLATA is an integrated, action-oriented transformation framework connecting people, nature, culture, technology, research, enterprise and sustainable development.
+
+The digital platform must not be developed as an ordinary informational website. It must progressively become an operational digital system through which users can:
+
+- Understand the ISRLATA framework.
+- Explore all projects and their activities.
+- Access research, knowledge and learning materials.
+- Participate in community and environmental initiatives.
+- Discover sustainable products and enterprises.
+- Submit project proposals and partnership applications.
+- Access agricultural and moral guidance resources.
+- Monitor implementation, performance and impact.
+- Access relevant public information and reports.
+- Connect with institutions, communities and partners.
+
+Every major component must have a defined purpose and a place in the overall architecture.
+
+## 2. THE NINE CORE PROJECTS
+
+The following nine projects are explicitly identified in the framework. All must receive dedicated sections and progressively developed functional modules.
+
+### 2.1 SURADMA
+**Sustainable Urban and Rural Aesthetic Development and Management Action**
+
+Required areas:
+- Urban and rural beautification.
+- Green parks, gardens and landscaped spaces.
+- Nature streets and green corridors.
+- Waste collection, sorting, recycling and composting.
+- Waste-to-art and creative environmental industries.
+- Community participation in environmental improvement.
+- Cultural tourism and aesthetic development.
+- Public-private-community partnerships.
+
+### 2.2 ISULAR
+**Integrated and Sustainable Utilization of Locally Available Resources**
+
+Required areas:
+- Mapping of locally available resources.
+- Water, soil, minerals, plants and indigenous knowledge.
+- County resource inventories.
+- County Resource Utilization Councils (CRUCs).
+- Local raw-material development.
+- Sustainable processing and value addition.
+- Resource-based employment and enterprise development.
+
+### 2.3 HNIRS
+**Human–Nature Interaction and Regenerative Systems**
+
+Required areas:
+- Ecosystem rehabilitation.
+- Reforestation and restoration of degraded land.
+- Riverbank and wetland restoration.
+- Community conservation programmes.
+- Pollution control and environmental clean-ups.
+- Regenerative parks and cultural forests.
+- Environmental education.
+- Human–nature interaction and stewardship.
+
+### 2.4 RAMAGS
+**Real-Life African Moral Action and Guider Systems**
+
+Required areas:
+- African moral consciousness and ethical education.
+- Family and community guidance.
+- Moral and ethical learning.
+- Integrity and responsible leadership.
+- Community mentorship.
+- Cultural and moral preservation.
+- Community peace and conflict prevention.
+- Moral guidance resources and campaigns.
+
+### 2.5 KCHAS
+**Kenyan Creative Hubs and Adaptation System**
+
+Required areas:
+- County creative innovation hubs.
+- Film, music, crafts, design and digital arts.
+- Cultural entrepreneurship.
+- Traditional arts integrated with modern technology.
+- Youth creativity and employment.
+- Innovation and adaptation programmes.
+- Cultural exchange and creative-industry development.
+
+### 2.6 FTLSS
+**Farmer–Tenant Leasehold Sustainability System**
+
+Required areas:
+- Fair and sustainable farmer–tenant agreements.
+- Land-use arrangements.
+- Soil and water conservation.
+- Long-term land productivity.
+- Farmer and tenant responsibilities.
+- Agricultural guidance and education.
+- Sustainable land-use practices.
+- Appropriate legal and institutional partnerships.
+
+### 2.7 HuMLIF
+**Human and Machine Labour Integration Framework**
+
+Required areas:
+- Human–machine cooperation.
+- Appropriate automation.
+- Agricultural technology.
+- Recycling and environmental technology.
+- Robotics and labour-support systems.
+- Equitable technology adoption.
+- Human skills development.
+- Productivity and responsible technological integration.
+
+### 2.8 AKBOR
+**African-Kenyan Based Originality Reforms**
+
+Required areas:
+- African-centred originality.
+- Indigenous knowledge and innovation.
+- Cultural identity and heritage.
+- Locally developed solutions.
+- African creativity and resourcefulness.
+- Appropriate adaptation of external technologies.
+- Originality in education, enterprise and development.
+
+### 2.9 GHISTN
+**Global Holistic Integrated and Sustainable Transformation Network**
+
+Required areas:
+- International cooperation.
+- African and global partnerships.
+- Knowledge exchange.
+- Integrated sustainability approaches.
+- Cross-country collaboration.
+- Global transformation benchmarking.
+- International research and innovation networks.
+- Global application of ISRLATA principles.
+
+## 3. CORE RESEARCH STREAMS
+
+The platform must include a research and knowledge section covering the seven research streams identified in the framework.
+
+1. **Sustainable Resource Utilization and Regeneration**
+   - Integrated soil fertility.
+   - Reforestation.
+   - Circular waste management.
+   - Renewable energy.
+   - Regenerative resource systems.
+
+2. **Climate Resilience and Eco-Agricultural Systems**
+   - Climate-smart crop modelling.
+   - Hydro-meteorological forecasting.
+   - Adaptive water management.
+   - AI-based farm advisory tools.
+
+3. **Human-Nature Interaction and Ethical Systems**
+   - Human responses to environmental aesthetics.
+   - Environmental ethics.
+   - Moral Guider System research.
+   - Community and ecological wellbeing.
+
+4. **Creative Economy and Aesthetic Development**
+   - Design, landscaping and architecture.
+   - Creative-industry economics.
+   - Aesthetic indices.
+   - Social wellbeing and environmental quality.
+
+5. **Technology and Human–Machine Integration**
+   - Automation and robotics.
+   - Agricultural technology.
+   - Recycling and landscaping technology.
+   - Human–Machine Harmony.
+
+6. **Cultural Identity, Moral Evolution, and Heritage Preservation**
+   - Indigenous attire, music, languages and rituals.
+   - Cultural preservation.
+   - Theory of Cultural Genetic Renewal.
+   - Moral and cultural continuity.
+
+7. **Global Holistic Integration and Systems Modeling**
+   - Global Transformation Index (GTI).
+   - Cross-country sustainability benchmarking.
+   - Integration with SDGs.
+   - AU Agenda 2063 and Kenya Vision 2030 alignment.
+
+## 4. KNOWLEDGE, AGRICULTURE AND MORAL GUIDANCE SYSTEMS
+
+### 4.1 Digital Knowledge Integration Platform (DKIP)
+
+DKIP must become a central digital knowledge infrastructure for ISRLATA.
+
+Required capabilities:
+- Cloud-based knowledge repository.
+- Research and project documentation.
+- Data visualisation dashboards.
+- Agricultural and environmental information.
+- Technical manuals and training resources.
+- AI-supported learning and analytical capabilities.
+- Citizen-science data collection.
+- Access for authorised researchers, institutions and partners.
+
+### 4.2 Farmer Guider Book (FGB)
+
+FGB must have a digital knowledge and extension module.
+
+Required content:
+- Climate-smart farming methods.
+- Local seed selection.
+- Soil, water and crop management.
+- Sustainable production.
+- Cultural and moral values in agriculture.
+- Farm record keeping.
+- Saving, marketing and economic literacy.
+- Mobile advisory integration.
+- QR-code access to DKIP resources.
+
+### 4.3 Moral Guider System (MGS)
+
+MGS must have a dedicated learning and guidance module.
+
+Required capabilities:
+- Moral and ethical learning resources.
+- School, university and community learning.
+- Family and leadership guidance.
+- Environmental morality.
+- Cultural awareness.
+- Digital ethics.
+- Public campaigns.
+- Conflict resolution and community peace resources.
+- Research and oversight information.
+
+The framework also identifies the National Moral and Ethics Council (NMEC), County Moral Action Committees (CMACs), Community Peace and Integrity Centers (CPICs) and National Moral Research Institute (NMRI).
+
+## 5. GOVERNANCE AND INSTITUTIONAL STRUCTURE
+
+The platform must represent the framework's governance and coordination structures.
+
+Required structures include:
+
+- National steering and oversight authority.
+- ISRLATA Technical Coordination Committee (ITCC).
+- County Implementation Units (CIUs).
+- Community Development Hubs (CDHs).
+- International Partnership Council (IPC).
+- Relevant county and national institutions.
+- Universities and research institutions.
+- Private-sector partners.
+- NGOs and civil-society organisations.
+- Faith-based organisations.
+- Development partners.
+
+The platform must support institutional profiles, responsibilities, collaboration records, reports and authorised administrative access.
+
+## 6. IMPLEMENTATION AND MONITORING
+
+The system must support the six-year implementation framework.
+
+| Phase | Period | Main purpose |
+|---|---|---|
+| Phase 1: Foundation | Year 1 | Institutions, partnerships and baseline data |
+| Phase 2: Pilot Integration | Year 2 | Pilot implementation in six counties |
+| Phase 3: National Rollout | Years 3–4 | Nationwide expansion |
+| Phase 4: Consolidation and Innovation | Year 5 | Feedback, technology and community ownership |
+| Phase 5: Sustainability and Transition | Year 6 | Long-term institutional and financial continuity |
+
+The platform must provide tools for:
+- Project progress reporting.
+- County-level implementation records.
+- Activity and milestone tracking.
+- Performance indicators.
+- Public impact dashboards.
+- Annual national progress reports.
+- County scorecards.
+- Research and evaluation records.
+- External audit documentation.
+
+Key framework indicators include climate-smart practices, local incomes, pollution reduction, aesthetic and tourism assets, and youth employment.
+
+## 7. SUSTAINABILITY AND LONG-TERM INSTITUTIONS
+
+The platform must include the following long-term mechanisms:
+
+### 7.1 ISRLATA National Institute (INI)
+Institutional information, research, training, fellowships and sustainability monitoring.
+
+### 7.2 ISRLATA Sustainability Fund (ISF)
+Financial sustainability information, funding mechanisms, enterprise contributions and supported initiatives.
+
+### 7.3 Policy Integration and Mainstreaming
+Documentation of integration into national and county development plans, policies and academic curricula.
+
+### 7.4 Transformation Barazas
+Community and public participation, feedback, accountability and proposals.
+
+### 7.5 Global Transformation Index (GTI)
+A benchmarking and analytical system for assessing holistic transformation across countries.
+
+## 8. PHILOSOPHICAL AND THEORETICAL FOUNDATIONS
+
+The platform must preserve and explain the framework's named foundations, including:
+
+- Law of Perfect Integration.
+- Law of Natural Abundance.
+- Theory of Cultural Genetic Renewal.
+- Principle of Planetary Responsibility.
+- Integrated Sustainability Philosophy (ISP).
+- Integrated Transformation Theory (ITT).
+- Theory of Holistic Integration.
+- Human–Machine Harmony.
+- Law of Regenerative Equilibrium.
+
+The Integrated Transformation Theory identifies the axioms of Unity, Regeneration, Dignity and Continuity.
+
+These foundations must be presented as ISRLATA's conceptual and intellectual framework, not as independently proven scientific laws.
+
+## 9. POLICY AND DEVELOPMENT ALIGNMENT
+
+The platform must provide an alignment and documentation section for the frameworks identified in the source document:
+
+- Kenya Vision 2030 and the Fourth Medium Term Plan 2023–2027.
+- Climate Change Act (2016).
+- Agriculture Sector Transformation and Growth Strategy (ASTGS).
+- Environmental Management and Coordination Act (EMCA, 1999).
+- Cultural and Heritage Policy (2018).
+- National Tourism Strategy (2023).
+- United Nations 2030 Agenda for Sustainable Development.
+- African Union Agenda 2063.
+
+Additional relevant policy alignments may be added through documented review and verification.
+
+## 10. WEBSITE AND APPLICATION REQUIREMENTS
+
+The development must deliver a connected website and a future Android application.
+
+### 10.1 Public website
+- Professional homepage.
+- ISRLATA identity, vision, mission and objectives.
+- Complete project directory.
+- Research and knowledge centre.
+- Agriculture and FGB resources.
+- MGS learning resources.
+- Enterprise and innovation directory.
+- News, publications and reports.
+- Partnerships and institutional information.
+- Contact and participation pages.
+
+### 10.2 User accounts
+- Registration and login.
+- User profiles.
+- Role-based permissions.
+- User dashboards.
+- Project participation records.
+- Secure account management.
+
+### 10.3 Administration
+- Secure administrator access.
+- User and role management.
+- Project and content management.
+- Research and publication management.
+- Partnership management.
+- Submission review.
+- Reporting and audit records.
+
+### 10.4 Project management
+- Project profiles.
+- Activities and milestones.
+- County and community implementation records.
+- Responsible teams.
+- Progress updates.
+- Documents and images.
+- Results and impact indicators.
+
+### 10.5 Finance and investment
+- Project budgets.
+- Funding proposals.
+- Investment justifications.
+- Funding sources.
+- Financial records.
+- Approved expenditure reporting.
+- Financial accountability and audit trails.
+
+Financial access must be restricted to authorised users.
+
+### 10.6 Future Android application
+The Android application must connect to the same authorised backend and support relevant mobile features, including:
+- User accounts.
+- Project participation.
+- FGB resources.
+- Learning materials.
+- Notifications.
+- Community reporting.
+- Field data collection.
+- Relevant offline access and synchronisation.
+
+## 11. SECURITY, PRIVACY AND DATA GOVERNANCE
+
+The platform must be designed with security from the beginning.
+
+Mandatory requirements:
+- Secure authentication.
+- Role-based access control.
+- Database access policies.
+- Protection of private user information.
+- Secure handling of uploaded files.
+- Validation of user submissions.
+- Administrative audit trails.
+- Backup and recovery planning.
+- Protection of confidential financial and institutional records.
+- Compliance review against applicable Kenyan data-protection requirements.
+
+Secret keys and privileged credentials must never be placed in public frontend code or committed to a public GitHub repository.
+
+## 12. DEVELOPMENT AND QUALITY CONTROL
+
+Development must follow a modular architecture.
+
+Every module must have:
+1. A clearly defined purpose.
+2. A connection to the ISRLATA framework.
+3. A user-facing interface where appropriate.
+4. Defined data requirements.
+5. Defined permissions.
+6. Functional workflows.
+7. Testing criteria.
+8. Documentation.
+
+A visual page without functioning actions must not be classified as a completed functional module.
+
+The development process must include:
+- Responsive design for desktop and mobile.
+- Accessible navigation.
+- Reusable components.
+- Consistent visual identity.
+- Database integrity.
+- Error handling.
+- Performance testing.
+- Security testing.
+- Functional testing.
+- Documentation and version control.
+
+## 13. DEVELOPMENT CONTROL RULES
+
+The following rules govern the entire build:
+
+1. The original ISRLATA framework is the primary source of project names and scope.
+2. Do not invent, rename or silently remove official framework components.
+3. Every one of the nine core projects must be represented.
+4. Research, governance, knowledge, finance, implementation and sustainability systems must not be forgotten.
+5. Every major module must be connected to the overall ISRLATA architecture.
+6. Proposed future features must be distinguished from capabilities already implemented.
+7. No fake statistics, partnerships, funding commitments or implementation results.
+8. No insecure public exposure of private data.
+9. Every development stage must be tested before being marked complete.
+10. The website must be designed to support future expansion across Kenya, Africa and the world.
+
+## 14. MASTER COMPLETION CHECKLIST
+
+- [ ] ISRLATA identity and public information.
+- [ ] Nine core projects.
+- [ ] Seven research streams.
+- [ ] DKIP.
+- [ ] Farmer Guider Book (FGB).
+- [ ] Moral Guider System (MGS).
+- [ ] Governance and institutional structures.
+- [ ] Six-year implementation framework.
+- [ ] Monitoring, evaluation and impact dashboards.
+- [ ] INI.
+- [ ] ISF.
+- [ ] Transformation Barazas.
+- [ ] Global Transformation Index.
+- [ ] Philosophical and theoretical foundations.
+- [ ] Policy and development alignment.
+- [ ] User registration and role management.
+- [ ] Project and activity management.
+- [ ] Research and publication management.
+- [ ] Finance and investment management.
+- [ ] Partnerships and institutional directory.
+- [ ] Security and data governance.
+- [ ] Responsive public website.
+- [ ] Future Android application.
+- [ ] Functional and security testing.
+- [ ] Technical documentation.
+
+## 15. SOURCE-OF-TRUTH AND DOCUMENT CONTROL
+
+This master document is a development requirements register based on the original ISRLATA framework.
+
+Where detailed implementation specifications are required, the original framework must be consulted. Additional user-approved ISRLATA initiatives and business concepts may be incorporated through documented revisions.
+
+Any discrepancy between a proposed digital feature and the original framework must be recorded and resolved rather than silently changing the framework.
+
+**Core development principle:**
+
+*One integrated system. All projects connected. Every action traceable. Every component serving sustainable real-life transformation.*
+
+**END OF MASTER REQUIREMENTS DOCUMENT**
