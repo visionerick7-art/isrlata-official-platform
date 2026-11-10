@@ -339,5 +339,14 @@ img {
 
   .section {
     padding: 55px 0;
-  }
+ 
+.category-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 15px;
+}
+ }
 }
