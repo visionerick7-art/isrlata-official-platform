@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISRLATA | Administrator Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .dashboard {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .dashboard-header {
+      background: #176b3a;
+      color: white;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .dashboard-card {
+      background: white;
+      padding: 22px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.09);
+    }
+
+    .dashboard-card h3 {
+      color: #176b3a;
+    }
+
+    .dashboard-card p {
+      color: #555;
+    }
+
+    .dashboard-button {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #176b3a;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    #adminStatus {
+      margin-top: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="dashboard">
+
+    <header class="dashboard-header">
+      <h1>ISRLATA Administrator Dashboard</h1>
+      <p>Integrated and Sustainable Real Life African Transformation Action</p>
+      <p id="adminStatus">Checking administrator session...</p>
+      <button id="logoutButton" type="button">Sign Out</button>
+    </header>
+
+    <section class="dashboard-grid">
+
+      <article class="dashboard-card">
+        <h3>Platform Overview</h3>
+        <p>Monitor the ISRLATA digital platform.</p>
+        <a href="#" class="dashboard-button">View Overview</a>
+      </article>
+
+      <article class="dashboard-card">
+        <h3>Projects Management</h3>
+        <p>Manage ISRLATA projects and their information.</p>
+        <a href="projects.html" class="dashboard-button">View Projects</a>
+      </article>
+
+      <article class="dashboard-card">
+        <h3>DKIP Management</h3>
+        <p>Manage knowledge categories and resources.</p>
+        <a href="dkip.html" class="dashboard-button">Open DKIP</a>
+      </article>
+
+      <article class="dashboard-card">
+        <h3>Research Records</h3>
+        <p>Manage research information and records.</p>
+        <a href="#" class="dashboard-button">View Records</a>
+      </article>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
