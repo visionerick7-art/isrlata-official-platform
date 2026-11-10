@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISRLATA | Administrator Login</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .admin-login {
+      max-width: 430px;
+      margin: 70px auto;
+      padding: 30px;
+      border-radius: 14px;
+      background: #ffffff;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+    }
+
+    .admin-login h1 {
+      text-align: center;
+      color: #176b3a;
+    }
+
+    .admin-login p {
+      text-align: center;
+    }
+
+    .admin-login label {
+      display: block;
+      margin-top: 18px;
+      font-weight: bold;
+    }
+
+    .admin-login input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 7px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+    }
+
+    .admin-login button {
+      width: 100%;
+      margin-top: 22px;
+      padding: 13px;
+      background: #176b3a;
+      color: white;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+
+    #loginMessage {
+      margin-top: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="admin-login">
+    <h1>ISRLATA</h1>
+    <p>Administrator Access Portal</p>
+
+    <form id="adminLoginForm">
+
+      <label for="adminEmail">Administrator Email</label>
+      <input
+        type="email"
+        id="adminEmail"
+        required
+        autocomplete="username"
+        placeholder="Enter your email"
+      >
+
+      <label for="adminPassword">Password</label>
+      <input
+        type="password"
+        id="adminPassword"
+        required
+        autocomplete="current-password"
+        placeholder="Enter your password"
+      >
+
+      <button type="submit">Sign In</button>
+
+      <p id="loginMessage" role="status"></p>
+
+    </form>
+  </main>
+
+</body>
+</html>
