@@ -58,6 +58,53 @@
   </style>
 </head>
 
+
+<script type="module">
+  import { supabase } from "./supabase-config.js";
+
+  const adminStatus = document.getElementById("adminStatus");
+  const logoutButton = document.getElementById("logoutButton");
+
+  async function protectDashboard() {
+    const { data: sessionData, error: sessionError } =
+      await supabase.auth.getSession();
+
+    if (sessionError || !sessionData.session) {
+      window.location.replace("admin.html");
+      return;
+    }
+
+    const { data: isAdmin, error: adminError } =
+      await supabase.rpc("is_isrlata_admin");
+
+    if (adminError || isAdmin !== true) {
+      await supabase.auth.signOut();
+      window.location.replace("admin.html");
+      return;
+    }
+
+    adminStatus.textContent =
+      "Administrator authenticated. Secure session active.";
+  }
+
+  logoutButton.addEventListener("click", async function() {
+    logoutButton.disabled = true;
+
+    const { error } = await supabase.auth.signOut();
+
+    if (error) {
+      adminStatus.textContent = "Sign out failed. Please try again.";
+      logoutButton.disabled = false;
+      return;
+    }
+
+    window.location.replace("admin.html");
+  });
+
+  protectDashboard();
+</script>
+</body>
+</html>
 <body>
 
   <main class="dashboard">
