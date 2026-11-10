@@ -1,0 +1,48 @@
+
+:root {
+  --green: #145c38;
+  --deep-green: #083b27;
+  --gold: #d6a83f;
+  --cream: #f7f8f2;
+  --white: #ffffff;
+  --dark: #17251d;
+  --muted: #66736a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+}
+
+.site-header {
+  background: var(--deep-green);
+  color: var(--white);
+}
+
+.hero {
+  background: var(--green);
+  color: var(--white);
+  padding: 80px 20px;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--deep-green);
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.site-footer {
+  background: var(--deep-green);
+  color: var(--white);
+}
