@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISRLATA DKIP Connection Test</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .test-panel {
+      max-width: 750px;
+      margin: 50px auto;
+      padding: 25px;
+      background: white;
+      border-radius: 12px;
+      color: #183b2a;
+    }
+    .test-result {
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      background: #f1f5f1;
+    }
+  </style>
+</head>
+<body>
+  <main class="test-panel">
+    <h1>ISRLATA Digital Knowledge Platform</h1>
+    <h2>Database Connection Test</h2>
+
+    <p id="connection-status">Connecting to Supabase...</p>
+
+    <h3>Knowledge Categories</h3>
+    <div id="categories">Waiting for database response...</div>
+
+    <p><a href="dkip.html">Return to DKIP</a></p>
+  </main>
+
+  <script type="module">
+    import { supabase } from "./supabase-config.js";
+
+    const status = document.getElementById("connection-status");
+    const categories = document.getElementById("categories");
+
+    async function testConnection() {
+      try {
+        const { data, error } = await supabase
+          .from("knowledge_categories")
+          .select("name")
+          .order("name");
+
+        if (error) throw error;
+
+        status.textContent = "SUCCESS: Connected to ISRLATA-DKIP!";
+        status.style.color = "green";
+
+        categories.innerHTML = "";
+
+        data.forEach((item) => {
+          const entry = document.createElement("div");
+          entry.className = "test-result";
+          entry.textContent = item.name;
+          categories.appendChild(entry);
+        });
+
+        if (data.length === 0) {
+          categories.textContent = "Connected, but no categories were returned.";
+        }
+
+      } catch (error) {
+        status.textContent = "CONNECTION ERROR: " + error.message;
+        status.style.color = "red";
+        categories.textContent = "Please check the connection configuration and database permissions.";
+        console.error(error);
+      }
+    }
+
+    testConnection();
+  </script>
+</body>
+</html>
