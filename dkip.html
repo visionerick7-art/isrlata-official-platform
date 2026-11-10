@@ -213,57 +213,9 @@
       aria-label="Search DKIP knowledge categories"
     >
 
-    <div class="dkip-grid" id="knowledgeGrid">
-
-      <article class="dkip-card knowledge-item">
-        <h3>Agriculture and Food Security</h3>
-        <p>
-          Farming systems, local seeds, soil health, water
-          management, food production and the Farmer Guider Book.
-        </p>
-      </article>
-
-      <article class="dkip-card knowledge-item">
-        <h3>Climate and Environment</h3>
-        <p>
-          Climate resilience, ecological restoration,
-          biodiversity, waste management and renewable energy.
-        </p>
-      </article>
-
-      <article class="dkip-card knowledge-item">
-        <h3>Culture and Heritage</h3>
-        <p>
-          African languages, indigenous knowledge, cultural
-          identity, heritage preservation and moral learning.
-        </p>
-      </article>
-
-      <article class="dkip-card knowledge-item">
-        <h3>Technology and Innovation</h3>
-        <p>
-          Human-machine integration, appropriate technology,
-          automation, sustainable products and innovation.
-        </p>
-      </article>
-
-      <article class="dkip-card knowledge-item">
-        <h3>Human Wellbeing</h3>
-        <p>
-          Human-nature interaction, social wellbeing,
-          community development and ethical systems.
-        </p>
-      </article>
-
-      <article class="dkip-card knowledge-item">
-        <h3>Creative and Aesthetic Development</h3>
-        <p>
-          Creative industries, sustainable design, landscaping,
-          urban and rural aesthetics and tourism assets.
-        </p>
-      </article>
-
-    </div>
+     <div class="dkip-grid" id="knowledgeGrid">
+  <p id="knowledgeStatus">Loading ISRLATA knowledge categories...</p>
+</div>
 
     <p class="dkip-empty" id="emptyMessage">
       No matching knowledge category found. Try another search.
@@ -372,5 +324,67 @@
   });
 </script>
 
+
+<script type="module">
+  import { supabase } from "./supabase-config.js";
+
+  const knowledgeGrid = document.getElementById("knowledgeGrid");
+  const knowledgeSearch = document.getElementById("knowledgeSearch");
+
+  let knowledgeCategories = [];
+
+  async function loadKnowledgeCategories() {
+    const { data, error } = await supabase
+      .from("knowledge_categories")
+      .select("id, name, description")
+      .order("name");
+
+    if (error) {
+      knowledgeGrid.textContent =
+        "Unable to load knowledge categories: " + error.message;
+      return;
+    }
+
+    knowledgeCategories = data;
+    displayKnowledgeCategories(knowledgeCategories);
+  }
+
+  function displayKnowledgeCategories(categories) {
+    knowledgeGrid.innerHTML = "";
+
+    categories.forEach(category => {
+      const article = document.createElement("article");
+      article.className = "dkip-card knowledge-item";
+
+      const heading = document.createElement("h3");
+      heading.textContent = category.name;
+
+      const description = document.createElement("p");
+      description.textContent = category.description || "ISRLATA knowledge and research stream.";
+
+      article.appendChild(heading);
+      article.appendChild(description);
+      knowledgeGrid.appendChild(article);
+    });
+
+    if (categories.length === 0) {
+      knowledgeGrid.textContent = "No matching knowledge categories found.";
+    }
+  }
+
+  knowledgeSearch.addEventListener("input", () => {
+    const searchTerm = knowledgeSearch.value.toLowerCase().trim();
+
+    const filtered = knowledgeCategories.filter(category =>
+      category.name.toLowerCase().includes(searchTerm) ||
+      (category.description || "").toLowerCase().includes(searchTerm)
+    );
+
+    displayKnowledgeCategories(filtered);
+  });
+
+  loadKnowledgeCategories();
+</script>
+</body>
 </body>
 </html>
