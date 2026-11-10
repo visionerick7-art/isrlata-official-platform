@@ -179,5 +179,71 @@
   <p>ISRLATA Marketplace | Made for Real-Life Transformation</p>
 </footer>
 
+
+<script type="module">
+  import { supabase } from "./supabase-config.js";
+
+  const container = document.getElementById("marketplaceCategories");
+
+  const icons = {
+    "Agriculture": "🌱",
+    "Manufacturing": "🏭",
+    "Creative Products": "🎨",
+    "Professional Services": "🛠️",
+    "Sustainability": "♻️",
+    "Business Opportunities": "🤝"
+  };
+
+  const images = {
+    "Agriculture": "images/agriculture.jpg"
+  };
+
+  async function loadMarketplaceCategories() {
+    container.textContent = "Loading categories...";
+
+    const { data, error } = await supabase
+      .from("marketplace_categories")
+      .select("id, name, description")
+      .order("name");
+
+    if (error) {
+      container.textContent = "Unable to load marketplace categories.";
+      console.error(error);
+      return;
+    }
+
+    container.innerHTML = "";
+
+    if (!data || data.length === 0) {
+      container.textContent = "No categories available yet.";
+      return;
+    }
+
+    data.forEach(category => {
+      const card = document.createElement("article");
+      card.className = "category";
+
+      if (images[category.name]) {
+        const img = document.createElement("img");
+        img.src = images[category.name];
+        img.alt = category.name;
+        img.className = "category-image";
+        card.appendChild(img);
+      }
+
+      const heading = document.createElement("h3");
+      heading.textContent =
+        (icons[category.name] || "🌍") + " " + category.name;
+
+      const description = document.createElement("p");
+      description.textContent = category.description || "";
+
+      card.append(heading, description);
+      container.appendChild(card);
+    });
+  }
+
+  loadMarketplaceCategories();
+</script>
 </body>
 </html>
