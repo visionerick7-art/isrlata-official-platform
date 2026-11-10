@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ISRLATA Digital Knowledge Integration Platform — a central system for integrated knowledge, research, data and learning.">
+  <title>DKIP | ISRLATA</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .dkip-hero {
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #103d2b, #176b45);
+      color: white;
+      border-radius: 18px;
+      margin-top: 25px;
+    }
+
+    .dkip-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin-bottom: 15px;
+    }
+
+    .dkip-hero p {
+      max-width: 760px;
+      line-height: 1.8;
+    }
+
+    .dkip-label {
+      display: inline-block;
+      padding: 7px 13px;
+      border: 1px solid rgba(255,255,255,.5);
+      border-radius: 30px;
+      margin-bottom: 15px;
+      font-size: .85rem;
+    }
+
+    .dkip-section {
+      padding: 45px 0;
+    }
+
+    .dkip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .dkip-card {
+      padding: 24px;
+      border-radius: 14px;
+      border: 1px solid #dce6df;
+      background: #fff;
+    }
+
+    .dkip-card h3 {
+      color: #176b45;
+      margin-top: 0;
+    }
+
+    .dkip-card p {
+      line-height: 1.7;
+    }
+
+    .dkip-search {
+      width: 100%;
+      max-width: 650px;
+      padding: 14px;
+      border: 1px solid #b9c9be;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin: 12px 0 25px;
+    }
+
+    .dkip-status {
+      display: inline-block;
+      font-size: .78rem;
+      padding: 5px 9px;
+      border-radius: 20px;
+      background: #edf4ef;
+      color: #176b45;
+      margin-bottom: 12px;
+    }
+
+    .dkip-note {
+      background: #f0f6f1;
+      padding: 20px;
+      border-left: 4px solid #176b45;
+      border-radius: 8px;
+      line-height: 1.7;
+    }
+
+    .dkip-back {
+      display: inline-block;
+      margin: 25px 0;
+      color: #176b45;
+      font-weight: bold;
+    }
+
+    .dkip-empty {
+      display: none;
+      padding: 15px;
+      color: #765b24;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">I</span>
+      <span>ISRLATA</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="dkip.html">DKIP</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="dkip-hero">
+    <span class="dkip-label">ISRLATA CENTRAL DIGITAL SYSTEM</span>
+    <h1>Digital Knowledge Integration Platform</h1>
+
+    <p>
+      A central digital knowledge environment designed to connect
+      research, practical action, project information, data,
+      learning and innovation across ISRLATA.
+    </p>
+
+    <p>
+      Knowledge is not meant to remain stored.
+      It should be organized, shared, understood and transformed
+      into responsible real-life action.
+    </p>
+  </section>
+
+  <section class="dkip-section">
+    <div class="section-heading">
+      <h2>Platform Architecture</h2>
+      <p>
+        Four connected knowledge functions form the initial
+        foundation of the DKIP.
+      </p>
+    </div>
+
+    <div class="dkip-grid">
+
+      <article class="dkip-card">
+        <h3>01. Knowledge Repository</h3>
+        <p>
+          A planned digital library for ISRLATA research reports,
+          technical manuals, training guides, project documents
+          and cultural archives.
+        </p>
+        <span class="dkip-status">Foundation module</span>
+      </article>
+
+      <article class="dkip-card">
+        <h3>02. Data Dashboards</h3>
+        <p>
+          A future data visualization environment for agriculture,
+          climate, environmental conditions and socio-economic
+          indicators.
+        </p>
+        <span class="dkip-status">Foundation module</span>
+      </article>
+
+      <article class="dkip-card">
+        <h3>03. AI Learning Modules</h3>
+        <p>
+          A planned learning and analytical environment supporting
+          predictive insights on food security, land use,
+          climate impacts and integrated sustainability.
+        </p>
+        <span class="dkip-status">Future development</span>
+      </article>
+
+      <article class="dkip-card">
+        <h3>04. Citizen Science Tools</h3>
+        <p>
+          A planned mobile-based contribution system through
+          which communities can submit environmental and
+          cultural observations for responsible analysis.
+        </p>
+        <span class="dkip-status">Future development</span>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="dkip-section">
+    <div class="section-heading">
+      <h2>Explore the Knowledge System</h2>
+      <p>
+        Search the initial DKIP knowledge categories.
+        This is a demonstration directory, not yet a connected
+        research database.
+      </p>
+    </div>
+
+    <input
+      type="search"
+      id="knowledgeSearch"
+      class="dkip-search"
+      placeholder="Search agriculture, climate, culture, technology..."
+      aria-label="Search DKIP knowledge categories"
+    >
+
+    <div class="dkip-grid" id="knowledgeGrid">
+
+      <article class="dkip-card knowledge-item">
+        <h3>Agriculture and Food Security</h3>
+        <p>
+          Farming systems, local seeds, soil health, water
+          management, food production and the Farmer Guider Book.
+        </p>
+      </article>
+
+      <article class="dkip-card knowledge-item">
+        <h3>Climate and Environment</h3>
+        <p>
+          Climate resilience, ecological restoration,
+          biodiversity, waste management and renewable energy.
+        </p>
+      </article>
+
+      <article class="dkip-card knowledge-item">
+        <h3>Culture and Heritage</h3>
+        <p>
+          African languages, indigenous knowledge, cultural
+          identity, heritage preservation and moral learning.
+        </p>
+      </article>
+
+      <article class="dkip-card knowledge-item">
+        <h3>Technology and Innovation</h3>
+        <p>
+          Human-machine integration, appropriate technology,
+          automation, sustainable products and innovation.
+        </p>
+      </article>
+
+      <article class="dkip-card knowledge-item">
+        <h3>Human Wellbeing</h3>
+        <p>
+          Human-nature interaction, social wellbeing,
+          community development and ethical systems.
+        </p>
+      </article>
+
+      <article class="dkip-card knowledge-item">
+        <h3>Creative and Aesthetic Development</h3>
+        <p>
+          Creative industries, sustainable design, landscaping,
+          urban and rural aesthetics and tourism assets.
+        </p>
+      </article>
+
+    </div>
+
+    <p class="dkip-empty" id="emptyMessage">
+      No matching knowledge category found. Try another search.
+    </p>
+  </section>
+
+  <section class="dkip-section">
+    <div class="section-heading">
+      <h2>Connected ISRLATA Systems</h2>
+      <p>
+        DKIP will provide a shared knowledge foundation for
+        the wider ISRLATA framework.
+      </p>
+    </div>
+
+    <div class="dkip-grid">
+
+      <article class="dkip-card">
+        <h3>Farmer Guider Book (FGB)</h3>
+        <p>
+          Practical farming knowledge, climate-smart methods,
+          local seed selection, soil and water management,
+          and economic literacy.
+        </p>
+      </article>
+
+      <article class="dkip-card">
+        <h3>Moral Guider System (MGS)</h3>
+        <p>
+          Knowledge and learning resources supporting integrity,
+          environmental responsibility, cultural appreciation
+          and community wellbeing.
+        </p>
+      </article>
+
+      <article class="dkip-card">
+        <h3>ISRLATA Project Network</h3>
+        <p>
+          Shared documentation and learning across the nine
+          core ISRLATA projects and their connected activities.
+        </p>
+        <a class="card-link" href="projects.html">
+          Explore Projects →
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="dkip-section">
+    <div class="dkip-note">
+      <h2>Development and Data Integrity</h2>
+      <p>
+        This page establishes the DKIP front-end foundation.
+        Cloud storage, user accounts, live dashboards,
+        AI services and citizen submissions will be introduced
+        in later development lessons.
+      </p>
+      <p>
+        No live research data is represented by the sample
+        categories on this page. Future contributions will
+        require appropriate verification, access controls,
+        privacy safeguards and responsible data management.
+      </p>
+    </div>
+  </section>
+
+  <a href="projects.html" class="dkip-back">
+    ← Return to ISRLATA Projects
+  </a>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      ISRLATA — Integrated and Sustainable Real Life African
+      Transformation Action.
+    </p>
+    <p>Knowledge • Integration • Sustainability • Action</p>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById("knowledgeSearch");
+  const knowledgeItems = document.querySelectorAll(".knowledge-item");
+  const emptyMessage = document.getElementById("emptyMessage");
+
+  searchInput.addEventListener("input", function () {
+    const searchTerm = this.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    knowledgeItems.forEach(function (item) {
+      const content = item.textContent.toLowerCase();
+      const matches = content.includes(searchTerm);
+
+      item.style.display = matches ? "" : "none";
+
+      if (matches) {
+        visibleCount++;
+      }
+    });
+
+    emptyMessage.style.display =
+      visibleCount === 0 ? "block" : "none";
+  });
+</script>
+
+</body>
+</html>
