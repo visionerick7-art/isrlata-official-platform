@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISRLATA | Research Records</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .research-container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .research-header {
+      background: #176b3a;
+      color: white;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    .research-panel {
+      background: white;
+      padding: 24px;
+      margin-top: 22px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .research-panel input,
+    .research-panel textarea,
+    .research-panel select {
+      width: 100%;
+      padding: 11px;
+      margin: 8px 0 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .research-panel button {
+      background: #176b3a;
+      color: white;
+      border: none;
+      padding: 11px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .record-card {
+      padding: 16px;
+      margin-top: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="research-container">
+
+    <header class="research-header">
+      <h1>ISRLATA Research Records</h1>
+      <p>Research information, evidence and real-life transformation records.</p>
+      <p id="researchStatus">Checking administrator access...</p>
+      <a href="dashboard.html" style="color:white;">Back to Dashboard</a>
+    </header>
+
+    <section class="research-panel">
+      <h2>Add Research Record</h2>
+
+      <form id="researchForm">
+
+        <label for="researchTitle">Research Title</label>
+        <input type="text" id="researchTitle" required>
+
+        <label for="researchDescription">Description</label>
+        <textarea id="researchDescription" rows="4" required></textarea>
+
+        <label for="researchStatusSelect">Publication Status</label>
+        <select id="researchStatusSelect">
+          <option value="draft">Draft</option>
+          <option value="published">Published</option>
+        </select>
+
+        <button type="submit">Save Research Record</button>
+
+      </form>
+
+      <p id="formMessage"></p>
+    </section>
+
+    <section class="research-panel">
+      <h2>Existing Research Records</h2>
+      <div id="researchRecords">Loading records...</div>
+    </section>
+
+  </main>
+
+</body>
+</html>
