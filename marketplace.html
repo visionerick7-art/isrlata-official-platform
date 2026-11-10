@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISRLATA Marketplace</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f8f3;
+      color: #20352a;
+    }
+
+    header {
+      background: #164d32;
+      color: white;
+      padding: 22px 7%;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin-bottom: 0;
+      color: #d8eadc;
+    }
+
+    nav {
+      background: #103b27;
+      padding: 13px 7%;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 22px;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 55px 7%;
+      background: #e1eddf;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      line-height: 1.6;
+    }
+
+    .search {
+      width: min(600px, 100%);
+      padding: 15px;
+      border: 1px solid #b7cbb9;
+      border-radius: 8px;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+    main {
+      padding: 35px 7%;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin: 22px 0 40px;
+    }
+
+    .category, .product {
+      background: white;
+      border: 1px solid #dce6dc;
+      border-radius: 10px;
+      padding: 22px;
+    }
+
+    .category h3, .product h3 {
+      color: #17623a;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product p {
+      line-height: 1.5;
+    }
+
+    .coming {
+      color: #94702a;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #164d32;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>ISRLATA Marketplace</h1>
+  <p>Integrated and Sustainable Real Life African Transformation Action</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="marketplace.html">Marketplace</a>
+  <a href="admin.html">Administrator</a>
+</nav>
+
+<section class="hero">
+  <h2>Discover. Trade. Transform.</h2>
+  <p>
+    A marketplace connecting African products, services,
+    creative enterprises, sustainable businesses and customers.
+  </p>
+
+  <input
+    class="search"
+    type="search"
+    placeholder="Search products and services..."
+    aria-label="Search products and services"
+  >
+</section>
+
+<main>
+
+  <h2>Explore Marketplace Categories</h2>
+
+  <section class="categories">
+    <article class="category">
+      <h3>🌱 Agriculture</h3>
+      <p>Farm produce, seeds and agricultural services.</p>
+    </article>
+
+    <article class="category">
+      <h3>🏭 Manufacturing</h3>
+      <p>Locally manufactured products and materials.</p>
+    </article>
+
+    <article class="category">
+      <h3>🎨 Creative Products</h3>
+      <p>Arts, crafts, fashion and creative works.</p>
+    </article>
+
+    <article class="category">
+      <h3>🛠 Services</h3>
+      <p>Professional, technical and community services.</p>
+    </article>
+
+    <article class="category">
+      <h3>♻ Sustainability</h3>
+      <p>Recycled products and environmentally responsible solutions.</p>
+    </article>
+
+    <article class="category">
+      <h3>🏢 Business Opportunities</h3>
+      <p>Enterprise partnerships and investment opportunities.</p>
+    </article>
+  </section>
+
+  <h2>Featured Marketplace</h2>
+
+  <section class="products">
+    <article class="product">
+      <h3>ISRLATA Agricultural Products</h3>
+      <p>Locally produced agricultural goods and related solutions.</p>
+      <p class="coming">Listings coming soon</p>
+    </article>
+
+    <article class="product">
+      <h3>ISRLATA Sustainable Furniture</h3>
+      <p>Affordable, integrated and sustainable furniture concepts.</p>
+      <p class="coming">Listings coming soon</p>
+    </article>
+
+    <article class="product">
+      <h3>ISRLATA Creative Enterprises</h3>
+      <p>Original African creative products and services.</p>
+      <p class="coming">Listings coming soon</p>
+    </article>
+  </section>
+
+</main>
+
+<footer>
+  <p>ISRLATA Marketplace | Made for Real-Life Transformation</p>
+</footer>
+
+</body>
+</html>
