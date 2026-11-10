@@ -58,6 +58,113 @@
   </style>
 </head>
 
+
+<script type="module">
+  import { supabase } from "./supabase-config.js";
+
+  const statusMessage = document.getElementById("researchStatus");
+  const recordsContainer = document.getElementById("researchRecords");
+  const researchForm = document.getElementById("researchForm");
+  const formMessage = document.getElementById("formMessage");
+
+  let isAdmin = false;
+
+  async function initializeResearch() {
+    const { data: sessionData, error: sessionError } =
+      await supabase.auth.getSession();
+
+    if (sessionError || !sessionData.session) {
+      window.location.replace("admin.html");
+      return;
+    }
+
+    const { data: adminCheck, error: adminError } =
+      await supabase.rpc("is_isrlata_admin");
+
+    if (adminError || adminCheck !== true) {
+      await supabase.auth.signOut();
+      window.location.replace("admin.html");
+      return;
+    }
+
+    isAdmin = true;
+    statusMessage.textContent = "Administrator verified.";
+
+    await loadResearchRecords();
+  }
+
+  async function loadResearchRecords() {
+    const { data, error } = await supabase
+      .from("research_records")
+      .select("*")
+      .order("created_at", { ascending: false });
+
+    if (error) {
+      recordsContainer.textContent = "Unable to load research records.";
+      console.error(error);
+      return;
+    }
+
+    recordsContainer.innerHTML = "";
+
+    if (!data.length) {
+      recordsContainer.textContent = "No research records available yet.";
+      return;
+    }
+
+    data.forEach(record => {
+      const card = document.createElement("article");
+      card.className = "record-card";
+
+      const title = document.createElement("h3");
+      title.textContent = record.title;
+
+      const summary = document.createElement("p");
+      summary.textContent = record.summary || "No summary provided.";
+
+      const status = document.createElement("p");
+      status.textContent = "Status: " + record.status;
+
+      card.append(title, summary, status);
+      recordsContainer.appendChild(card);
+    });
+  }
+
+  researchForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    if (!isAdmin) return;
+
+    const title = document.getElementById("researchTitle").value.trim();
+    const summary = document.getElementById("researchDescription").value.trim();
+    const status = document.getElementById("researchStatusSelect").value;
+
+    formMessage.textContent = "Saving research record...";
+
+    const { error } = await supabase
+      .from("research_records")
+      .insert([{
+        title: title,
+        summary: summary,
+        status: status
+      }]);
+
+    if (error) {
+      formMessage.textContent = "Save failed: " + error.message;
+      console.error(error);
+      return;
+    }
+
+    formMessage.textContent = "Research record saved successfully!";
+    researchForm.reset();
+
+    await loadResearchRecords();
+  });
+
+  initializeResearch();
+</script>
+</body>
+</html>
 <body>
 
   <main class="research-container">
