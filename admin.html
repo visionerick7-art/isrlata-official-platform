@@ -59,6 +59,48 @@
   </style>
 </head>
 
+
+<script type="module">
+  import { supabase } from "./supabase-config.js";
+
+  const loginForm = document.getElementById("adminLoginForm");
+  const loginMessage = document.getElementById("loginMessage");
+
+  loginForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("adminEmail").value.trim();
+    const password = document.getElementById("adminPassword").value;
+
+    loginMessage.textContent = "Signing in...";
+
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password
+    });
+
+    if (error) {
+      loginMessage.textContent = "Login failed: " + error.message;
+      return;
+    }
+
+    const { data: adminStatus, error: adminError } =
+      await supabase.rpc("is_isrlata_admin");
+
+    if (adminError || adminStatus !== true) {
+      await supabase.auth.signOut();
+      loginMessage.textContent =
+        "Access denied. This account is not an ISRLATA administrator.";
+      return;
+    }
+
+    loginMessage.textContent = "Administrator verified! Login successful.";
+
+    // We will redirect to the dashboard after creating it.
+  });
+</script>
+</body>
+</html>
 <body>
 
   <main class="admin-login">
