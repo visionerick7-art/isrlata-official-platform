@@ -301,9 +301,7 @@ async function loadMarketplaceProducts() {
 
     const seller = document.createElement("p");
     seller.className = "product-seller";
-    seller.textContent =
-      "Seller: " +
-      (product.marketplace_sellers?.business_name || "ISRLATA Seller");
+    seller.textContent = "Seller: ISRLATA Marketplace Seller";
 
     card.append(type, title, description, price, seller);
     container.appendChild(card);
