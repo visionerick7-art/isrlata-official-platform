@@ -236,6 +236,86 @@
     });
   }
 
+async function loadMarketplaceProducts() {
+  const container = document.getElementById("marketplaceProducts");
+
+  container.textContent = "Loading products and services...";
+
+  const { data, error } = await supabase
+    .from("marketplace_products")
+    .select(`
+      id,
+      title,
+      description,
+      listing_type,
+      price,
+      currency,
+      image_url,
+      marketplace_sellers (
+        business_name,
+        location
+      )
+    `)
+    .eq("status", "published")
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    container.textContent = "Unable to load products.";
+    console.error(error);
+    return;
+  }
+
+  container.innerHTML = "";
+
+  if (!data || data.length === 0) {
+    container.textContent =
+      "No published products yet. Be the first to join the ISRLATA Marketplace!";
+    return;
+  }
+
+  data.forEach(product => {
+    const card = document.createElement("article");
+    card.className = "product";
+
+    if (product.image_url) {
+      const image = document.createElement("img");
+      image.src = product.image_url;
+      image.alt = product.title;
+      image.className = "product-image";
+      card.appendChild(image);
+    }
+
+    const type = document.createElement("span");
+    type.className = "product-type";
+    type.textContent =
+      product.listing_type === "service" ? "SERVICE" : "PRODUCT";
+
+    const title = document.createElement("h3");
+    title.textContent = product.title;
+
+    const description = document.createElement("p");
+    description.textContent =
+      product.description || "No description provided.";
+
+    const price = document.createElement("p");
+    price.className = "product-price";
+    price.textContent =
+      Number(product.price).toLocaleString("en-KE") +
+      " " + product.currency;
+
+    const seller = document.createElement("p");
+    seller.className = "product-seller";
+    seller.textContent =
+      "Seller: " +
+      (product.marketplace_sellers?.business_name || "ISRLATA Seller");
+
+    card.append(type, title, description, price, seller);
+    container.appendChild(card);
+  });
+}
+
+loadMarketplaceProducts();
+
   loadMarketplaceCategories();
 </script>
 </body>
