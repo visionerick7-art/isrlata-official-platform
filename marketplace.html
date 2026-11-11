@@ -244,18 +244,14 @@ async function loadMarketplaceProducts() {
   const { data, error } = await supabase
     .from("marketplace_products")
     .select(`
-      id,
-      title,
-      description,
-      listing_type,
-      price,
-      currency,
-      image_url,
-      marketplace_sellers (
-        business_name,
-        location
-      )
-    `)
+  id,
+  title,
+  description,
+  listing_type,
+  price,
+  currency,
+  image_url
+`)
     .eq("status", "published")
     .order("created_at", { ascending: false });
 
