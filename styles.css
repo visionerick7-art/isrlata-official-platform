@@ -45,7 +45,7 @@ body {
 .site-footer {
   background: var(--deep-green);
   color: var(--white);}
-
+}
 .products-section {
   padding: 35px 20px;
 }
@@ -100,5 +100,5 @@ body {
   padding: 5px 10px;
   border-radius: 20px;
   font-size: 12px;
-}
+
 
