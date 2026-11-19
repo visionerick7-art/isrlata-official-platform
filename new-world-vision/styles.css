@@ -386,7 +386,70 @@ footer p {
   .landscape-card {
     min-height: 190px;
     padding: 25px;
+ 
+/* FUTURE AFRICAN CITIES FEATURE */
+
+.city-vision {
+  position: relative;
+  max-width: 1150px;
+  min-height: 380px;
+  margin: 65px auto 20px;
+  padding: 65px 8%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 18px;
+  background:
+    linear-gradient(100deg, #061a14 5%, #103b2c 65%, #174b36);
+}
+
+.city-vision::after {
+  content: "AFRICA";
+  position: absolute;
+  right: 3%;
+  bottom: -35px;
+  color: rgba(212, 175, 55, 0.08);
+  font-size: clamp(5rem, 15vw, 12rem);
+  font-weight: 900;
+  letter-spacing: 8px;
+  pointer-events: none;
+}
+
+.city-vision-content {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+}
+
+.city-vision h2 {
+  margin: 18px 0;
+  color: #f4d36b;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.15;
+}
+
+.city-vision-content > p:not(.eyebrow) {
+  color: #e0e8e1;
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+.city-vision .vision-note {
+  margin-top: 25px;
+  color: #d4af37;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .city-vision {
+    margin: 40px 6% 15px;
+    min-height: 320px;
+    padding: 40px 25px;
   }
+}
+ }
 }
   }
 }
