@@ -184,6 +184,43 @@ body {
     font-size: 14px;
     padding: 10px 11px;
     white-space: normal;
+ 
+/* DASHBOARD AND TOP NAVIGATION VISIBILITY FIX */
+
+.main-nav a,
+.main-nav a[href*="dashboard"],
+.main-nav a[href*="admin"] {
+  color: #ffffff !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px;
+  padding: 14px 16px !important;
+}
+
+/* Dashboard: strong visible contrast */
+.main-nav a[href*="dashboard"],
+.main-nav a[href*="admin"] {
+  background: #e0bd55 !important;
+  color: #06291f !important;
+  border: 2px solid #ffffff;
+  border-radius: 7px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Dashboard hover */
+.main-nav a[href*="dashboard"]:hover,
+.main-nav a[href*="admin"]:hover {
+  background: #ffffff !important;
+  color: #06291f !important;
+}
+
+/* Smaller screens */
+@media (max-width: 650px) {
+  .main-nav a {
+    font-size: 15px !important;
+    padding: 11px 12px !important;
   }
+}
+ }
 }
 
